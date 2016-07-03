@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yzw.android.fragmenttabhost.MainActivity">
+    <!-- 这个布局决定了标签在上面还是在下面-->
+<FrameLayout android:id="@+id/realcontent"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1"
+    />
+
+
+    <android.support.v4.app.FragmentTabHost
+        android:id="@android:id/tabhost"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:background="@mipmap/tabhost_bg"
+        >
+<FrameLayout
+    android:id="@android:id/tabcontent"
+    android:layout_width="0dp"
+    android:layout_height="0dp"
+    android:layout_weight="0"
+    />
+    </android.support.v4.app.FragmentTabHost>
+
+
+</LinearLayout>
